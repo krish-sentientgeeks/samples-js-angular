@@ -10,7 +10,6 @@
  * See the License for the specific language governing permissions and limitations under the License.
  */
 
-import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { OktaAuthService } from '@okta/okta-angular';
 
@@ -32,10 +31,10 @@ export class AppComponent implements OnInit {
   }
 
   login() {
-    this.oktaAuth.loginRedirect();
+    this.oktaAuth.signInWithRedirect();
   }
 
   logout() {
-    this.oktaAuth.logout('/');
+    this.oktaAuth.signOut('/');
   }
 }
